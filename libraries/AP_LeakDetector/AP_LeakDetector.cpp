@@ -95,7 +95,7 @@ void AP_LeakDetector::init()
     for (int i = 0; i < LEAKDETECTOR_MAX_INSTANCES; i++) {
         switch (_pin[i]) {
 #if (CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_CHIBIOS_FMUV3 || \
-     CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_CHIBIOS_FMUV5)
+     CONFIG_HAL_BOARD_SUBTYPE == HAL_BOARD_SUBTYPE_CHIBIOS_FMUV4)
             case 13 ... 15:
                 _type[i].set_default(ANALOG);
                 break;
